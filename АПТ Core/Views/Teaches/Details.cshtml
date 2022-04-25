@@ -1,0 +1,55 @@
+﻿@model АПТ_Core.Models.Teach
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Teach</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fam)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fam)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Im)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Im)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ZarPlata)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ZarPlata)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

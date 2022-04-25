@@ -1,0 +1,64 @@
+﻿@model АПТ_Core.Models.Stud
+
+@{
+    ViewData["Title"] = "Удалить";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Удалить</h1>
+
+<h3>Вы уверены, что хотите удалить этого студента?</h3>
+<div>
+    <h4>Студент</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fam)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fam)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Im)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Im)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rost)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rost)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BirthDay)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BirthDay)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.St_Ball)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.St_Ball)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Stipendiya)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Stipendiya)
+        </dd>
+    </dl>
+    
+    <form asp-action="Удалить">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Студенты</a>
+    </form>
+</div>

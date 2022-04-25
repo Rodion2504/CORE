@@ -1,0 +1,66 @@
+﻿@model IEnumerable<АПТ_Core.Models.Teach>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fam)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Im)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ZarPlata)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Im)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rost)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ZarPlata)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
